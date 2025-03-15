@@ -1,5 +1,25 @@
 # data-curation-twitter
 
+- [data-curation-twitter](#data-curation-twitter)
+  - [Logs](#logs)
+    - [Mar.15, 2025](#mar15-2025)
+  - [Solution](#solution)
+    - [File Format](#file-format)
+    - [Parquet Engine](#parquet-engine)
+    - [Parquet Compression Schema](#parquet-compression-schema)
+    - [Indexing System](#indexing-system)
+      - [Tweet Text: Year + User ID Range](#tweet-text-year--user-id-range)
+      - [User Profile (Embedded) (TODO)](#user-profile-embedded-todo)
+      - [User Profile (TODO)](#user-profile-todo)
+      - [User Network (TODO)](#user-network-todo)
+  - [Data Format (Curated Data)](#data-format-curated-data)
+  - [Data Format (Original Data)](#data-format-original-data)
+    - [Twitter Text](#twitter-text)
+      - [**Pickle file**: pandas DataFrame](#pickle-file-pandas-dataframe)
+      - [**iPickle file**: dictionary](#ipickle-file-dictionary)
+    - [User Profile (TODO)](#user-profile-todo-1)
+    - [User Network (TODO)](#user-network-todo-1)
+
 ## Logs
 ### Mar.15, 2025
 initialize
@@ -125,9 +145,8 @@ Each day (`yyyy-mm-dd`) has several integer indices (0-99). Each index has a pic
 }
 ```
 
----
 
-#### **`users` pandas DataFrame**: Embedded information of a user. The information captures the user's status at the time of crawling.
+**`users` pandas DataFrame**: Embedded information of a user. The information captures the user's status at the time of crawling.
 
 | Variable                       | Format    | Content                                                                                 |
 |--------------------------------|-----------|-----------------------------------------------------------------------------------------|
@@ -144,9 +163,9 @@ Each day (`yyyy-mm-dd`) has several integer indices (0-99). Each index has a pic
 
 ---
 
-#### **`tweets` pandas DataFrame**: Same format as the pickle file.
+**`tweets` pandas DataFrame**: Same format as the pickle file.
 
 
-#### User Profile (TODO)
+### User Profile (TODO)
 
-#### User Network (TODO)
+### User Network (TODO)
